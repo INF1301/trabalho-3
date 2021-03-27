@@ -83,9 +83,6 @@ void *lst_retIni(Lista *lst) {
 	if(lst_vazia(lst)) {
 		return NULL;
 	}
-	if(lst->corr == -1) {
-		return NULL;
-	}
 	if(lst->corr == lst->ini) {
 		lst->corr = -1;
 	}
@@ -104,9 +101,6 @@ void *lst_retIni(Lista *lst) {
 void *lst_retFin(Lista *lst) {
 	void* v;
 	if(lst_vazia(lst)) {
-		return NULL;
-	}
-	if(lst->corr == -1) {
 		return NULL;
 	}
 	if(lst->corr == lst->fin) {
